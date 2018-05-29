@@ -1,5 +1,4 @@
 class Genre 
-  attr_accessor :artist 
   attr_reader :name 
   @@all = []
   
@@ -14,12 +13,12 @@ class Genre
   
   def new_song(name, artist)
     song = Song.new(name, artist, self)
-    song.artist = self 
+    song.genre = self 
   end 
   
   def songs 
     Songs.all.select do |song|
-      song.artist == self 
+      song.genre == self 
     end 
   
   def genres 
