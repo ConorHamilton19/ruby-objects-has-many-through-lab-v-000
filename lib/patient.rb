@@ -15,11 +15,11 @@ class Patient
     Appointment.new(self, date, doctor)
   end
   
-  def doctors
+  def appointments
     Appointment.all.select{|app| app.patient == self}
   end 
   
-  def patients 
+  def doctors 
     Appointment.all.collect do |app|
       if app.patient == self 
         app.doctor
