@@ -21,7 +21,9 @@ class Patient
   
   def doctors 
     Appointment.all.collect do |app|
-      app.doctor
+      if app.patient = self 
+        app.doctor
+      end 
     end 
   end
 end 
