@@ -20,6 +20,10 @@ class Patient
   end 
   
   def patients 
-    Appointment.all.collect{|app| app.doctor}
+    Appointment.all.collect do |app|
+      if app.patient == self 
+        app.doctor
+      end 
+    end 
   end
 end 
