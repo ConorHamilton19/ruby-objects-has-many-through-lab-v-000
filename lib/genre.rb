@@ -1,5 +1,5 @@
 class Genre 
-  attr_reader :name 
+  attr_accessor :name, :artist, :genre
   @@all = []
   
   def self.all 
