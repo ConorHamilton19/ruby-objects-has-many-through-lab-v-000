@@ -1,5 +1,5 @@
 class Artist 
-  attr_reader :name 
+  attr_accessor :name, :genre
   @@all = []
   
   def self.all 
