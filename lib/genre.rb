@@ -23,6 +23,6 @@ class Genre
   
   def genres 
     Songs.all.collect do |song|
-      song.genre
+      song.artist 
     end 
 end 
