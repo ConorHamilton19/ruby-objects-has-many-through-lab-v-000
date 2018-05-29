@@ -20,7 +20,7 @@ class Patient
   end 
   
   def doctors 
-    Appointment.all.collect do |app|
+    Appointment.all.select do |app|
       if app.patient == self 
         app.doctor
       end 
